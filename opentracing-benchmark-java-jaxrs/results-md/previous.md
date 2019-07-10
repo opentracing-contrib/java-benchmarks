@@ -2,7 +2,7 @@
 
 ## 2019-04-07
 
-The results are located [here](http://jmh.morethan.io/?sources=https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-04-07-16-04-45.json,https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-04-07-16-20-31.json,https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-04-07-16-36-17.json&topBar=Opentracing%20java%20jax-rs).
+The results are located [here](http://jmh.morethan.io/?sources=https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-04-07-16-04-45.json,https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-04-07-16-20-31.json,https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-04-07-16-36-17.json&topBar=Opentracing%20java%20jax-rs).
 These graphics are constructed based on raw results located in the ``results`` folder.
 
 ### SampleTime metrics
@@ -25,7 +25,7 @@ These graphics are constructed based on raw results located in the ``results`` f
 
 ## 2019-03-27
 
-The results are located [here](http://jmh.morethan.io/?sources=https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-03-27-13-14-55.json,https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-03-27-13-39-41.json,https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-03-27-13-59-24.json&topBar=Opentracing%20java%20jax-rs).
+The results are located [here](http://jmh.morethan.io/?sources=https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-03-27-13-14-55.json,https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-03-27-13-39-41.json,https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-java-jaxrs/results/jmh-2019-03-27-13-59-24.json&topBar=Opentracing%20java%20jax-rs).
 These graphics are constructed based on raw results located in the ``results`` folder.
 
 ### SampleTime metrics

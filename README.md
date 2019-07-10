@@ -67,9 +67,9 @@ We use [JMH-visualizer](https://github.com/jzillmann/jmh-visualizer) to present 
 for this amazing tool!. 
 
 The results of different scenarios are located in each project:
-- [opentracing-benchmark-simple-java](https://github.com/gsoria/opentracing-java-benchmark/tree/master/opentracing-benchmark-simple-java)
-- [opentracing-benchmark-spring-boot](https://github.com/gsoria/opentracing-java-benchmark/tree/master/opentracing-benchmark-spring-boot)
-- [opentracing-benchmark-java-servlet-filter](https://github.com/gsoria/opentracing-java-benchmark/tree/master/opentracing-benchmark-java-servlet-filter)
-- [opentracing-benchmark-spring-cloud](https://github.com/gsoria/opentracing-java-benchmark/tree/master/opentracing-benchmark-spring-cloud)
-- [opentracing-benchmark-java-jaxrs](https://github.com/gsoria/opentracing-java-benchmark/tree/master/opentracing-benchmark-java-jaxrs)
-- [opentracing-benchmark-java-jdbc](https://github.com/gsoria/opentracing-java-benchmark/tree/master/opentracing-benchmark-java-jdbc)
+- [opentracing-benchmark-simple-java](https://github.com/opentracing-contrib/java-benchmarks/tree/master/opentracing-benchmark-simple-java)
+- [opentracing-benchmark-spring-boot](https://github.com/opentracing-contrib/java-benchmarks/tree/master/opentracing-benchmark-spring-boot)
+- [opentracing-benchmark-java-servlet-filter](https://github.com/opentracing-contrib/java-benchmarks/tree/master/opentracing-benchmark-java-servlet-filter)
+- [opentracing-benchmark-spring-cloud](https://github.com/opentracing-contrib/java-benchmarks/tree/master/opentracing-benchmark-spring-cloud)
+- [opentracing-benchmark-java-jaxrs](https://github.com/opentracing-contrib/java-benchmarks/tree/master/opentracing-benchmark-java-jaxrs)
+- [opentracing-benchmark-java-jdbc](https://github.com/opentracing-contrib/java-benchmarks/tree/master/opentracing-benchmark-java-jdbc)

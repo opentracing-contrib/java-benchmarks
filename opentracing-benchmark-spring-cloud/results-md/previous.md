@@ -2,7 +2,7 @@
 
 ## 2019-04-07
 
-The results are located [here](http://jmh.morethan.io/?sources=https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-spring-cloud/results/jmh-2019-04-07-14-56-15.json,https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-spring-cloud/results/jmh-2019-04-07-15-18-35.json,https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-spring-cloud/results/jmh-2019-04-07-15-40-51.json&topBar=Opentracing%20spring%20cloud).
+The results are located [here](http://jmh.morethan.io/?sources=https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-spring-cloud/results/jmh-2019-04-07-14-56-15.json,https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-spring-cloud/results/jmh-2019-04-07-15-18-35.json,https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-spring-cloud/results/jmh-2019-04-07-15-40-51.json&topBar=Opentracing%20spring%20cloud).
 These graphics are constructed based on raw results located in the ``results`` folder.
 
 ### SampleTime metrics
@@ -25,7 +25,7 @@ These graphics are constructed based on raw results located in the ``results`` f
 
 ## 2019-03-26
 
-The results are located [here](http://jmh.morethan.io/?sources=https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-spring-cloud/results/jmh-2019-03-26-15-10-33.json,https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-spring-cloud/results/jmh-2019-03-26-16-04-10.json,https://raw.githubusercontent.com/gsoria/opentracing-java-benchmark/master/opentracing-benchmark-spring-cloud/results/jmh-2019-03-26-16-33-12.json&topBar=Opentracing%20spring%20cloud).
+The results are located [here](http://jmh.morethan.io/?sources=https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-spring-cloud/results/jmh-2019-03-26-15-10-33.json,https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-spring-cloud/results/jmh-2019-03-26-16-04-10.json,https://raw.githubusercontent.com/opentracing-contrib/java-benchmarks/master/opentracing-benchmark-spring-cloud/results/jmh-2019-03-26-16-33-12.json&topBar=Opentracing%20spring%20cloud).
 These graphics are constructed based on raw results located in the ``results`` folder.
 
 ### SampleTime metrics
