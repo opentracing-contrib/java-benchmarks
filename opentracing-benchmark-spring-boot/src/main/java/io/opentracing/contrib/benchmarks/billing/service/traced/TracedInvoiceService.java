@@ -1,6 +1,7 @@
 package io.opentracing.contrib.benchmarks.billing.service.traced;
 
 import io.opentracing.Scope;
+import io.opentracing.Span;
 import io.opentracing.Tracer;
 import io.opentracing.contrib.benchmarks.billing.model.Invoice;
 import io.opentracing.contrib.benchmarks.billing.service.TaxService;
@@ -22,10 +23,11 @@ public class TracedInvoiceService extends InvoiceServiceImpl {
 
     @Override
     public Long createInvoice(Invoice invoice) {
-        try (Scope scope = tracer.buildSpan("createInvoice").startActive(true)) {
-            scope.span().log("createInvoice");
-            scope.span().setTag("customer", invoice.getCustomer().getEmail());
-            scope.span().setBaggageItem("taxId",
+        Span span = tracer.buildSpan("createInvoice").start();
+        try (Scope scope = tracer.scopeManager().activate(span)) {
+            span.log("createInvoice");
+            span.setTag("customer", invoice.getCustomer().getEmail());
+            span.setBaggageItem("taxId",
                     invoice.getCustomer().getTaxId());
             return super.createInvoice(invoice);
         }

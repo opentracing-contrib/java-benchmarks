@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.2.RELEASE</version>
+		<version>2.5.0</version>
 	</parent>
 	<groupId>io.opentracing.contrib</groupId>
 	<artifactId>opentracing-benchmark-spring-cloud</artifactId>
@@ -20,9 +20,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<!-- Web dependencies -->
-		<webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
-		<webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
-		<webjars-jquery.version>2.2.4</webjars-jquery.version>
+		<webjars-bootstrap.version>5.0.1</webjars-bootstrap.version>
+		<webjars-jquery-ui.version>1.12.1</webjars-jquery-ui.version>
+		<webjars-jquery.version>3.6.0</webjars-jquery.version>
 		<wro4j.version>1.8.0</wro4j.version>
 
 		<jacoco.version>0.8.2</jacoco.version>
@@ -30,23 +30,23 @@
 		<!--
             JMH version to use with this project.
           -->
-		<jmh.version>1.21</jmh.version>
+		<jmh.version>1.31</jmh.version>
 		<!--
             Name of the benchmark Uber-JAR to generate.
           -->
 		<uberjar.name>benchmarks</uberjar.name>
 
 		<!-- Opentracing version -->
-		<opentracing.version>0.31.0</opentracing.version>
+		<opentracing.version>0.33.0</opentracing.version>
 		<!--
             Opentracing Spring Cloud version
           -->
-		<opentracing.spring.cloud.version>0.2.2</opentracing.spring.cloud.version>
+		<opentracing.spring.cloud.version>0.5.9</opentracing.spring.cloud.version>
 		<!--
             Jaeger version
           -->
-		<jaeger.version>0.31.0</jaeger.version>
-		<haystack.version>0.2.5</haystack.version>
+		<jaeger.version>1.6.0</jaeger.version>
+		<haystack.version>0.4.0</haystack.version>
 		<spring.boot.mainclass>org.sample.benchmarks.BenchmarkPetclinic</spring.boot.mainclass>
 	</properties>
 	<dependencies>
@@ -83,10 +83,30 @@
 			<artifactId>opentracing-mock</artifactId>
 			<version>${opentracing.version}</version>
 		</dependency>
+		<!-- validation dependency -->
+		<dependency>
+    		<groupId>javax.validation</groupId>
+    		<artifactId>validation-api</artifactId>
+    		<version>2.0.1.Final</version>
+		</dependency>
+		<dependency> 
+        	<groupId>org.hibernate</groupId>
+        	<artifactId>hibernate-validator</artifactId>
+        	<version>7.0.1.Final</version>
+    	</dependency> 
+    	<dependency> 
+        	<groupId>org.glassfish</groupId>
+        	<artifactId>javax.el</artifactId>
+        	<version>3.0.1-b12</version>
+     	</dependency>
 		<!-- Spring and Spring Boot dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency> 
+    		<groupId>org.springframework.boot</groupId> 
+    		<artifactId>spring-boot-starter-validation</artifactId> 
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -173,7 +193,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.2</version>
+				<version>3.2.4</version>
 				<executions>
 					<execution>
 						<phase>package</phase>

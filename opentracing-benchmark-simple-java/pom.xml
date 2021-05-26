@@ -57,7 +57,7 @@
         <!--
             JMH version to use with this project.
           -->
-        <jmh.version>1.21</jmh.version>
+        <jmh.version>1.31</jmh.version>
 
         <!--
             Java source/target to use for compilation.
@@ -71,15 +71,15 @@
         <!--
             Opentracing version
           -->
-        <opentracing.version>0.31.0</opentracing.version>
+        <opentracing.version>0.33.0</opentracing.version>
         <!--
             Opentracing version
           -->
-        <jaeger.version>0.31.0</jaeger.version>
+        <jaeger.version>1.6.0</jaeger.version>
         <!--
             Haystack
           -->
-        <haystack.version>0.2.5</haystack.version>
+        <haystack.version>0.4.0</haystack.version>
     </properties>
     <build>
         <plugins>
