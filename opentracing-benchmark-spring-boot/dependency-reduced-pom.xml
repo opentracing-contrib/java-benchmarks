@@ -210,7 +210,7 @@
   <properties>
     <jmh.version>1.31</jmh.version>
     <jaeger.version>1.6.0</jaeger.version>
-    <java.version>1.8</java.version>
+    <java.version>14</java.version>
     <uberjar.name>benchmarks</uberjar.name>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <haystack.version>0.4.0</haystack.version>

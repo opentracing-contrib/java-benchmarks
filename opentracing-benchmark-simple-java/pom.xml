@@ -57,12 +57,12 @@
         <!--
             JMH version to use with this project.
           -->
-        <jmh.version>1.31</jmh.version>
+        <jmh.version>1.32</jmh.version>
 
         <!--
             Java source/target to use for compilation.
           -->
-        <javac.target>1.8</javac.target>
+        <javac.target>14</javac.target>
 
         <!--
             Name of the benchmark Uber-JAR to generate.

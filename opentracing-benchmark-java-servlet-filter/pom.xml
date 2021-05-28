@@ -20,9 +20,9 @@
         <opentracing.version>0.33.0</opentracing.version>
         <opentracing.java.servlet.filter.version>0.4.1</opentracing.java.servlet.filter.version>
         <haystack.version>0.4.0</haystack.version>
-        <jmh.version>1.31</jmh.version>
+        <jmh.version>1.32</jmh.version>
         <jaeger.version>1.6.0</jaeger.version>
-        <undertow.version>2.2.7.Final</undertow.version>
+        <undertow.version>2.2.8.Final</undertow.version>
         <unirest.version>1.4.9</unirest.version>
         <log4j.version>1.2.17</log4j.version>
 
