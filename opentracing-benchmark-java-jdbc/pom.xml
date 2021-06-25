@@ -12,10 +12,36 @@
 	<description>This project contains benchmark tests of opentracing java jax-rs.
 		The jax-rx example is based on: https://github.com/tachuela700/course-management
 	</description>
+	
+	<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+        <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>1.7.30</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>1.7.30</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+    </dependencies>
+    </dependencyManagement>
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.3.RELEASE</version>
+		<version>2.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -25,15 +51,15 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<!-- compilation properties -->
-		<java.version>1.8</java.version>
+		<java.version>14</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
-
+        
 
 		<!--
             JMH version to use with this project.
           -->
-		<jmh.version>1.21</jmh.version>
+		<jmh.version>1.32</jmh.version>
 		<!--
             Name of the benchmark Uber-JAR to generate.
           -->
@@ -41,15 +67,15 @@
 		<!--
             Opentracing version
           -->
-		<opentracing.version>0.31.0</opentracing.version>
-		<opentracing.jdbc.version>0.0.12</opentracing.jdbc.version>
+		<opentracing.version>0.33.0</opentracing.version>
+		<opentracing.jdbc.version>0.2.15</opentracing.jdbc.version>
 		<!--
             Jaeger version
           -->
-		<jaeger.version>0.31.0</jaeger.version>
-		<haystack.version>0.2.5</haystack.version>
+		<jaeger.version>1.6.0</jaeger.version>
+		<haystack.version>0.4.0</haystack.version>
 	</properties>
-
+    
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -69,23 +95,16 @@
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.3.2</version>
+			<version>2.2.0</version>
+		</dependency>
+		<dependency>
+  			<groupId>junit</groupId>
+  			<artifactId>junit</artifactId>
+  			<version>4.13.2</version>
+  			<scope>test</scope>
 		</dependency>
 
-		<!-- Logging -->
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jul-to-slf4j</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>log4j-over-slf4j</artifactId>
-		</dependency>
-
+		<!-- Logging moved up in dependency management-->
 
 		<!-- Optional -->
 		<dependency>
@@ -168,7 +187,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.2</version>
+				<version>3.2.4</version>
 				<executions>
 					<execution>
 						<phase>package</phase>

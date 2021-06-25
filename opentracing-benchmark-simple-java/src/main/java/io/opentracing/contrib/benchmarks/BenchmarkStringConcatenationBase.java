@@ -10,6 +10,7 @@ import io.opentracing.Tracer;
 import io.opentracing.contrib.benchmarks.config.TracerConfiguration;
 import io.opentracing.contrib.benchmarks.config.TracerImplementation;
 import io.opentracing.mock.MockTracer;
+import io.opentracing.Span;
 import io.opentracing.noop.NoopTracerFactory;
 import org.openjdk.jmh.annotations.Level;
 import org.openjdk.jmh.annotations.Scope;
@@ -80,33 +81,37 @@ public class BenchmarkStringConcatenationBase {
     }
 
     public String doNoopTracer(StateVariables state) {
-        try (io.opentracing.Scope scope = state.noopTracer.buildSpan("testStringConcatenationStringBuilder").startActive(true)) {
+       Span span = state.noopTracer.buildSpan("testStringConcatenationStringBuilder").start();
+        try (io.opentracing.Scope scope = state.noopTracer.scopeManager().activate(span)) {
             String message = getLogMessage(state);
-            scope.span().setTag(TRACER, TracerImplementation.NOOPTRACER).log(message);
+            span.setTag(TRACER, TracerImplementation.NOOPTRACER).log(message);
             return message;
         }
     }
 
     public String doMockTracer(StateVariables state) {
-        try (io.opentracing.Scope scope = state.mockTracer.buildSpan("testStringConcatenationStringBuilder").startActive(true)) {
+        Span span = state.mockTracer.buildSpan("testStringConcatenationStringBuilder").start();
+        try (io.opentracing.Scope scope = state.mockTracer.scopeManager().activate(span)) {
             String message = getLogMessage(state);
-            scope.span().setTag(TRACER, TracerImplementation.MOCKTRACER).log(message);
+            span.setTag(TRACER, TracerImplementation.MOCKTRACER).log(message);
             return message;
         }
     }
 
     public String doJaegerTracer(StateVariables state) {
-        try (io.opentracing.Scope scope = state.jaegerTracer.buildSpan("testStringConcatenationStringBuilder").startActive(true)) {
+        Span span = state.jaegerTracer.buildSpan("testStringConcatenationStringBuilder").start();
+        try (io.opentracing.Scope scope = state.jaegerTracer.scopeManager().activate(span)) {
             String message = getLogMessage(state);
-            scope.span().setTag(TRACER, TracerImplementation.JAEGERTRACER).log(message);
+            span.setTag(TRACER, TracerImplementation.JAEGERTRACER).log(message);
             return message;
         }
     }
 
     public String doHaystackTracer(StateVariables state){
-        try (io.opentracing.Scope scope = state.haystackTracer.buildSpan("testStringConcatenationStringBuilder").startActive(true)) {
+        Span span = state.haystackTracer.buildSpan("testStringConcatenationStringBuilder").start();
+        try (io.opentracing.Scope scope = state.haystackTracer.scopeManager().activate(span)) {
             String message = getLogMessage(state);
-            scope.span().setTag(TRACER, TracerImplementation.HAYSTACKTRACER).log(message);
+            span.setTag(TRACER, TracerImplementation.HAYSTACKTRACER).log(message);
             return message;
         }
     }
