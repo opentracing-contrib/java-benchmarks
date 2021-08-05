@@ -2,23 +2,23 @@ package io.opentracing.contrib.benchmarks;
 
 import io.opentracing.contrib.benchmarks.course.CourseManagementApplication;
 import io.opentracing.contrib.benchmarks.config.TracerImplementation;
-import io.opentracing.contrib.benchmarks.course.resources.CourseResource;
+import io.opentracing.contrib.benchmarks.course.model.entities.Course;
+import io.opentracing.contrib.benchmarks.course.model.services.CourseService;
 import org.openjdk.jmh.annotations.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.AbstractEnvironment;
-
-import javax.ws.rs.core.Response;
+import java.util.List;
 
 public class BenchmarkCourseManagementBase {
 
-    public Response getAllCourses(StateVariables state) {
-        return state.course.getAll();
+    public List<Course> getAllCourses(StateVariables state) {
+        return state.service.findAll();
     }
 
     @State(Scope.Benchmark)
     public static class StateVariables {
-        public CourseResource course;
+        public CourseService service;
         public ConfigurableApplicationContext c;
 
         @TearDown(Level.Iteration)
@@ -28,7 +28,7 @@ public class BenchmarkCourseManagementBase {
 
         public void initApplication() {
             c = SpringApplication.run(CourseManagementApplication.class);
-            course = c.getBean(CourseResource.class);
+            service = c.getBean(CourseService.class);
         }
     }
 
