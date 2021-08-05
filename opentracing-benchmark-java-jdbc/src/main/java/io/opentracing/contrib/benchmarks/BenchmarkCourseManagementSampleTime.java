@@ -1,40 +1,41 @@
 package io.opentracing.contrib.benchmarks;
 
+import io.opentracing.contrib.benchmarks.course.model.entities.Course;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Mode;
 
-import javax.ws.rs.core.Response;
+import java.util.List;
 
 public class BenchmarkCourseManagementSampleTime extends BenchmarkCourseManagementBase {
 
     @Benchmark
     @BenchmarkMode(Mode.SampleTime)
-    public Response noInstrumentation(StateVariablesNotInstrumented state) {
+    public List<Course> noInstrumentation(StateVariablesNotInstrumented state) {
         return getAllCourses(state);
     }
 
     @Benchmark
     @BenchmarkMode(Mode.SampleTime)
-    public Response noopTracer(StateVariablesNoopTracer state) {
+    public List<Course> noopTracer(StateVariablesNoopTracer state) {
         return getAllCourses(state);
     }
 
     @Benchmark
     @BenchmarkMode(Mode.SampleTime)
-    public Response jaegerTracer(StateVariablesJaeger state) {
+    public List<Course> jaegerTracer(StateVariablesJaeger state) {
         return getAllCourses(state);
     }
 
     @Benchmark
     @BenchmarkMode(Mode.SampleTime)
-    public Response haystackTracer(StateVariablesHaystack state) {
+    public List<Course> haystackTracer(StateVariablesHaystack state) {
         return getAllCourses(state);
     }
 
     @Benchmark
     @BenchmarkMode(Mode.SampleTime)
-    public Response mockTracer(StateVariablesMockTracer state) {
+    public List<Course> mockTracer(StateVariablesMockTracer state) {
         return getAllCourses(state);
     }
 }
